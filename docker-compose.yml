@@ -6,12 +6,12 @@ services:
     external_links:
       - mysql:db
     volumes:
-      - ./isa:/app
+      - ./:/app
     ports:
       - "8001:8000"
     networks:
       - backend
-    command: bash -c "mod_wsgi-express start-server --working-directory <project_root_dir> --reload-on-changes <path_to_wsgi.py>/wsgi.py"
+    command: bash -c "mod_wsgi-express start-server --working-directory / --reload-on-changes /isa/wsgi.py"
 
 networks:
   backend:
