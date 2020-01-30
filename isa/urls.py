@@ -22,5 +22,4 @@ from main.views import send_json
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    path('sendjson/', send_json, name='send_json'),
 ]
