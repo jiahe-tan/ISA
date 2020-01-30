@@ -7,7 +7,6 @@ from . import views
 
 
 urlpatterns = [
-    path('/api/v1/users/',views.user_all, name='user_all'),
-    path('/api/v1/users/<int:pk>/',views.user_info, name='user_info'),
-    path('/api/v1/users/create/',views.user_create, name='user_create'),
+    path('api/v1/users/',views.user_all, name='user_all'),
+    path('api/v1/users/create/',views.user_create, name='user_create'),
 ]
