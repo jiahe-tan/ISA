@@ -1,10 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse, HttpResponse
+from django.views.decorators.crsf import csrf_exempt
 
 from .models import *
 from django.forms.models import model_to_dict
 # Create your views here.
 
+@csrf_exempt
 def user_create(request):
     if request.method == 'POST':
         json_data = request.POST
